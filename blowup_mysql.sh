@@ -1,7 +1,7 @@
 #!/bin/bash
 brew uninstall mysql
-read -p '>>>> Would you like me to search for where mysql is installed or use default? [y/n] ' SEARCH
-if [[ "{SEARCH}" == 'y' || "{SEARCH}" == 'Y' || "{SEARCH}" == 'yes' ]]
+read -p '>>>> Would you like me to search for where mysql is installed [search/default] ' SEARCH
+if [[ "{SEARCH}" == 'search' || "{SEARCH}" == 'Search' || "{SEARCH}" == 'SEARCH' ]]
 then
   MYSQL=$(which mysql)
   echo "${MYSQL}"
@@ -14,6 +14,7 @@ else
   sudo rm -rf /usr/local/mysql*
 fi
 
+sudo rm /usr/local/opt/my.*
 sudo rm -rf /Library/StartupItems/MySQLCOM
 sudo rm -rf /Library/PreferencePanes/My*
 rm -rf ~/Library/PreferencePanes/My*
