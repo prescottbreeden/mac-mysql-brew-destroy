@@ -14,7 +14,7 @@ else
   sudo rm -rf /usr/local/mysql*
 fi
 
-sudo rm /usr/local/opt/my.*
+sudo rm /usr/local/opt/my*
 sudo rm -rf /Library/StartupItems/MySQLCOM
 sudo rm -rf /Library/PreferencePanes/My*
 rm -rf ~/Library/PreferencePanes/My*
